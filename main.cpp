@@ -57,18 +57,18 @@ int main() {
     }
 
 
-    outputFile << "Результаты переборного алгоритма:" << endl;
-    outputFile << "Минимальная стоимость назначения: " << minCostBruteForce << endl;
-    outputFile << "Распределение работников на работы:" << endl;
+    outputFile << "The results of the iterative algorithm:" << endl;
+    outputFile << "Min cost: " << minCostBruteForce << endl;
+    outputFile << "Workers -> Jobs:" << endl;
     for (int i = 0; i < n; ++i) {
-        outputFile << "Работник " << i + 1 << " -> Работа " << bestAssignmentBruteForce[i] + 1 << endl;
+        outputFile << "Worker " << i + 1 << " -> Job " << bestAssignmentBruteForce[i] + 1 << endl;
     }
 
-    outputFile << endl << "Результаты жадного алгоритма:" << endl;
-    outputFile << "Минимальная стоимость назначения: " << minCostGreedy << endl;
-    outputFile << "Распределение работников на работы:" << endl;
+    outputFile << endl << "The results of the greedy algorithm:" << endl;
+    outputFile << "Min cost: " << minCostGreedy << endl;
+    outputFile << "Workers -> Jobs:" << endl;
     for (int i = 0; i < n; ++i) {
-        outputFile << "Работник " << i + 1 << " -> Работа " << bestAssignmentGreedy[i] + 1 << endl;
+        outputFile << "Worker " << i + 1 << " -> Job " << bestAssignmentGreedy[i] + 1 << endl;
     }
 
     outputFile.close();
